@@ -1,0 +1,8 @@
+<h1>NOMBRE HOTEL</h1>
+<ul class="room-regime_list">
+	<li selectable-card
+		class="room-regime-card"
+		[cardContent]="card"
+		(onCardSelected)="selectedRegime($event)"
+		*ngFor="let card of regimeList"></li>
+</ul>

@@ -1,0 +1,7 @@
+<ul>
+	<li *ngFor="let link of navList">
+		<a 	[href]="link.path"
+				[ngClass]="{'active':routeData?.urlAfterRedirects==='/'+link.path}"
+				(click)="onNavigate($event, link.path)">{{link.label}}</a>
+	</li>
+</ul>

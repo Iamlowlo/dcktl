@@ -1,0 +1,11 @@
+<article>
+	<header>
+		<h1>{{cardContent.title}}</h1>
+	</header>
+	<ul>
+		<li *ngFor="let spec of cardContent.specs">{{spec}}</li>
+	</ul>
+	<footer>
+		<button (click)="onSelection(cardContent)">{{cardContent.cta}}</button>
+	</footer>
+</article>
