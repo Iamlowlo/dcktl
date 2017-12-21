@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { roomExtrasMock } from '../../mocks/the-cocktail.mocks';
+import { RoomExtraContainer } from '../../models/the-cocktail.model';
 
 @Component({
   selector: 'app-room-extras.container',
@@ -6,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./room-extras.container.component.scss']
 })
 export class RoomExtrasComponent implements OnInit {
+  roomExtras: Array<RoomExtraContainer>
 
-  constructor() { }
+  constructor() {
+    this.roomExtras = roomExtrasMock
+  }
 
   ngOnInit() {
   }

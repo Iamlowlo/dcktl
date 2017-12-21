@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { tabListMock } from '../../mocks/the-cocktail.mocks';
-import { TabContent } from '../../models/the-cocktail.model';
+import { tabListMock, hotelInfoMock } from '../../mocks/the-cocktail.mocks';
+import { TabContent, HotelInfo } from '../../models/the-cocktail.model';
 
 @Component({
   selector: 'app-room-regime.container',
@@ -10,15 +10,17 @@ import { TabContent } from '../../models/the-cocktail.model';
 export class RoomRegimeComponent implements OnInit {
 
 	regimeList: Array<TabContent>
+	hotelInfo: HotelInfo
 
   constructor() {
   	this.regimeList = tabListMock
+  	this.hotelInfo = hotelInfoMock
   }
 
   ngOnInit() {
   }
 
-  selectedRegime($event) { 
+  selectedRegime($event) {
   	console.log($event)
   }
 }

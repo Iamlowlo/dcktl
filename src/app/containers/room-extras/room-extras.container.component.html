@@ -1,3 +1,32 @@
-<p>
-  room-extras.container works!
-</p>
+<ul>
+  <li dropdown-card *ngFor="let roomExtraContainer of roomExtras">
+      <header dropdown-card-header>
+        <h1>{{roomExtraContainer.title}}</h1>
+        <span class="subtitle">{{roomExtraContainer.subtitle}}</span>
+        <span class="dropdown-card_label"
+              [ngClass]="{'tag_top-left': roomExtraContainer.tag.position === 'top-left'}">{{roomExtraContainer.tag.label}}</span>
+      </header>
+      <div dropdown-card-body>
+        <article *ngFor="let roomExtra of roomExtraContainer.extras">
+          <aside>
+            <img [src]="roomExtra.img" alt="{{roomExtra.title}}">
+          </aside>
+          <header>
+            <h1>{{roomExtra.title}}</h1>
+          </header>
+          <p>{{roomExtra.body}}</p>
+          <div class="room-extra_see-more">
+            <div class="room-extra_see-more_title">{{roomExtra.seeMore.title}}</div>
+            <div class="room-extra_see-more_content">
+              <div class="room-extra_see-more_label" *ngIf="roomExtra.seeMore.label">{{roomExtra.seeMore.label}}</div>
+              <ul class="room-extra_see-more_info-list">
+                <li class="room-extra_see-more_info"
+                    *ngFor="let info of roomExtra.seeMore.info">{{info}}</li>
+              </ul>
+              <span>{{roomExtra.seeMore.footNote}}</span>
+            </div>
+          </div>
+        </article>
+      </div>
+  </li>
+</ul>
