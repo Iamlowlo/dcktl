@@ -1,0 +1,30 @@
+// Font families
+$fontFamily_Roboto: 'Roboto', sans-serif;
+$fontFamily_RobotoSlab: 'Roboto Slab', serif;
+
+// Colors
+$blue_chathams: #17497c;
+$blue_hawkes: #e5f2fd;
+$blue_picton: #48a8f1;
+$green_sushi: #6dc138;
+$grey_athens: #EEF0F3;
+$grey_shuttle: #5F6672;
+$red_alizarin: #e82e34;
+$white: #FFF;
+$white_alabaster: #FAFAFA;
+$white_wildsand: #F6F6F6;
+
+// Breakpoints
+$desktop: 1280;
+$tablet: 768;
+$mobile: 360;
+
+// Spacing
+$base_gap: 40;
+$half_gap: $base_gap / 2;
+$quarter_gap: $base_gap / 4;
+$eighth_gap: $base_gap / 8;
+$borderRadius: 2;
+
+// Utils
+$defaultAnimationLength: 0.3s;

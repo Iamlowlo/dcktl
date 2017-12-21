@@ -1,0 +1,119 @@
+@import "~app/shared/styles/_variables.scss";
+@import "~app/shared/styles/_mixins.scss";
+
+:host {
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  padding-left: unit($quarter_gap, px);
+  padding-right: unit($quarter_gap, px);
+  padding-bottom: unit($quarter_gap, px);
+  border-radius: unit($borderRadius, px);
+  border: 1px solid $blue_hawkes;
+  transition: border-color $defaultAnimationLength;
+  &.active {
+    border-color: $blue_chathams;
+    .selectible-card_button {
+      border-color: $blue_chathams;
+      &:before {
+        border-color: $green_sushi;
+      }
+      &:after {
+        transform: scale(0.6, 0.6);
+      }
+    }
+  }
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header {
+  color: $blue_chathams;
+  padding: unit($half_gap, px);
+  text-align: center;
+  position: relative;
+  &:before {
+    content: '';
+    background-color: $blue_hawkes;
+    height: 2px;
+    position: absolute;
+    left: 35%;
+    right: 35%;
+    bottom: 0;
+  }
+}
+
+footer {
+  padding-top: unit($half_gap, px);
+}
+
+.selectible-card {
+  &_title {
+    font-size: 1em;
+    color: $blue_chathams;
+  }
+  &_spec-list {
+    font-size: 0.95em;
+    padding-top: unit($base_gap, px);
+    flex-grow: 1;
+  }
+  &_spec {
+    color: $blue_chathams;
+    padding-left: unit($half_gap, px);
+    margin-bottom: unit($quarter_gap, px);
+    position: relative;
+    &:before {
+      color: $grey_shuttle;
+      content: '\2022';
+      display: block;
+      left: unit($eighth_gap, px);
+      top: unit($eighth_gap, px);
+      position: absolute;
+    }
+  }
+  &_button {
+    background-color: $white_wildsand;
+    border: 1px solid rgba($blue_chathams, 0);
+    color: $grey_shuttle;
+    cursor: pointer;
+    position: relative;
+    padding: 0.8em unit($quarter_gap, px) 0.8em unit($half_gap, px);
+    transition: border-color $defaultAnimationLength;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+    &:before {
+      background-color: $white_alabaster;
+      border: 1px solid $grey_shuttle;
+      border-radius: 100%;
+      content: '';
+      display: block;
+      height: 1em;
+      left: 0.8em;
+      position: absolute;
+      top: 0.8em;
+      width: 1em;
+      transition: border-color $defaultAnimationLength;
+    }
+    &:after {
+      background-color: $green_sushi;
+      border: 1px solid transparent;
+      border-radius: 100%;
+      content: '';
+      display: block;
+      height: 1em;
+      left: 0.8em;
+      position: absolute;
+      top: 0.8em;
+      width: 1em;
+      transform: scale(0,0);
+      transition: transform $defaultAnimationLength;
+    }
+  }
+}
+

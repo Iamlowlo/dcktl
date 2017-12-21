@@ -1,0 +1,45 @@
+@import "~app/shared/styles/_variables.scss";
+@import "~app/shared/styles/_mixins.scss";
+
+:host {
+  color: $blue_chathams;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: $fontFamily_RobotoSlab;
+  font-size: 1.5em;
+  font-weight: normal;
+  justify-content: center;
+  line-height: 1.25em;
+  padding: 1em;
+  padding-top: 1em;
+  text-align: center;
+  @media (min-width: unit($tablet, px)) {
+    align-items: baseline;
+    flex-direction: row;
+  }
+}
+
+.hotel-title_type {
+  text-transform: uppercase;
+  @media (min-width: unit($tablet, px)) {
+    margin-right: unit($quarter_gap, px);
+  }
+}
+
+.star-list {
+  display: flex;
+  margin-top: unit($quarter_gap, px);
+  @media (min-width: unit($tablet, px)) {
+    margin-left: unit($base_gap, px);
+    margin-top: 0;
+  }
+  &_star {
+    background-image: url("/assets/star-orange.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 0.6em;
+    margin-right: 0.1em;
+    width: 0.6em;
+  }
+}

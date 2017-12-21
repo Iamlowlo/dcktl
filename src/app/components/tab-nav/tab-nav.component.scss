@@ -1,3 +1,39 @@
-.active {
-	background-color: red;
+@import "~app/shared/styles/_variables.scss";
+@import "~app/shared/styles/_mixins.scss";
+
+.tab-nav {
+  display: flex;
+  font-family: $fontFamily_RobotoSlab;
+  justify-content: flex-end;
+
+  &_link {
+    display: block;
+    color: $blue_picton;
+    font-size: 1em;
+    line-height: 0.875em;
+    min-width: 125px;
+    padding: unit($quarter_gap, px) unit($half_gap, px);
+    position: relative;
+    text-align: center;
+    transition: color $defaultAnimationLength;
+
+    &:before {
+      background-color: $blue_chathams;
+      bottom: 0;
+      content: '';
+      height: 3px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      transition: transform $defaultAnimationLength;
+    }
+
+    &.active {
+      color: $blue_chathams;
+      &:before {
+        transform: scaleX(1);
+      }
+    }
+  }
 }

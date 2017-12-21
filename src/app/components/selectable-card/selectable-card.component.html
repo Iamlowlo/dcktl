@@ -1,11 +1,13 @@
 <article>
 	<header>
-		<h1>{{cardContent.title}}</h1>
+		<h1 class="selectible-card_title">{{cardContent.title}}</h1>
 	</header>
-	<ul>
-		<li *ngFor="let spec of cardContent.specs">{{spec}}</li>
+	<ul class="selectible-card_spec-list">
+		<li *ngFor="let spec of cardContent.specs"
+        class="selectible-card_spec">{{spec}}</li>
 	</ul>
 	<footer>
-		<button (click)="onSelection(cardContent)">{{cardContent.cta}}</button>
+		<button class="selectible-card_button"
+            (click)="onSelection(cardContent)">{{cardContent.cta}}</button>
 	</footer>
 </article>

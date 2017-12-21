@@ -1,58 +1,58 @@
-import {TabContent, HotelInfo, RoomExtraContainer} from '../models/the-cocktail.model'
+import {TabContent, HotelInfo, RoomExtraContainer} from '../models/the-cocktail.model';
 
 export const tabListMock: Array<TabContent> = [
-  		{
-  			title: 'Solo Alojamiento',
-  			specs: [
-  				'Sin régimen',
-  				'Botella de agua de bienvenida'
-  			],
-  			cta: 'Elegir régimen'
-  		}, {
-  			title: 'Alojamiento y Desayuno',
-  			specs: [
-  				'Desayuno buffet completo'
-  			],
-  			cta: 'Elegir régimen'
-  		}, {
-  			title: 'Media Pensión',
-  			specs: [
-  				'Desayuno buffet completo',
-  				'Cena buffet',
-  				'No incluye'
-  			],
-  			cta: 'Elegir régimen'
-  		}, {
-  			title: 'Todo Incluido',
-  			specs: [
-  				'Dispondrás de comida y bebida todo el día durante tu estancia',
-  				'Restaurante Buffet',
-  				'Snack Bar',
-  				'Servicio de bares (marcas nacionales)'
-  			],
-  			cta: 'Elegir régimen'
-  		}, {
-  			title: 'Unlimited Services',
-  			specs: [
-  				'Restaurante Buffet con bebidas Premium',
-  				'Restaurante a la carta (una cena por estancia)',
-  				'Snack Bar con bebidas Premium',
-  				'Minibar incluido',
-  				'Acceso a SPA y 45 minutos de masaje por persona',
-  				'Actividades deportivas (acuáticas sin motor)',
-  				'Caja fuerte',
-  				'Parking gratuito',
-  				'Lavandería'
-  			],
-  			cta: 'Elegir régimen'
-  		}
-  	]
+      {
+        title: 'Solo Alojamiento',
+        specs: [
+          'Sin régimen',
+          'Botella de agua de bienvenida'
+        ],
+        cta: 'Elegir régimen'
+      }, {
+        title: 'Alojamiento y Desayuno',
+        specs: [
+          'Desayuno buffet completo'
+        ],
+        cta: 'Elegir régimen'
+      }, {
+        title: 'Media Pensión',
+        specs: [
+          'Desayuno buffet completo',
+          'Cena buffet',
+          'No incluye'
+        ],
+        cta: 'Elegir régimen'
+      }, {
+        title: 'Todo Incluido',
+        specs: [
+          'Dispondrás de comida y bebida todo el día durante tu estancia',
+          'Restaurante Buffet',
+          'Snack Bar',
+          'Servicio de bares (marcas nacionales)'
+        ],
+        cta: 'Elegir régimen'
+      }, {
+        title: 'Unlimited Services',
+        specs: [
+          'Restaurante Buffet con bebidas Premium',
+          'Restaurante a la carta (una cena por estancia)',
+          'Snack Bar con bebidas Premium',
+          'Minibar incluido',
+          'Acceso a SPA y 45 minutos de masaje por persona',
+          'Actividades deportivas (acuáticas sin motor)',
+          'Caja fuerte',
+          'Parking gratuito',
+          'Lavandería'
+        ],
+        cta: 'Elegir régimen'
+      }
+    ];
 
 export const hotelInfoMock: HotelInfo = {
   type: 'Hotel',
   name: 'Mieres del Camín Apartamentos',
   stars: 4
-}
+};
 
 export const roomExtrasMock: Array<RoomExtraContainer> = [{
   title: 'Mejora tu estancia',
@@ -67,7 +67,7 @@ export const roomExtrasMock: Array<RoomExtraContainer> = [{
            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
            cillum dolore`,
-    img: '/img.png',
+    img: 'room_extra_01.jpg',
     seeMore: {
       label: 'Mas información y condiciones',
       title: 'Incluye',
@@ -85,7 +85,7 @@ export const roomExtrasMock: Array<RoomExtraContainer> = [{
            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
            cillum dolore`,
-    img: '/img.png',
+    img: 'room_extra_02.jpg',
     seeMore: {
       label: 'Mas información y condiciones',
       title: 'Incluye',
@@ -112,7 +112,7 @@ export const roomExtrasMock: Array<RoomExtraContainer> = [{
            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
            cillum dolore`,
-    img: '/img.png',
+    img: 'room_extra_02.jpg',
     seeMore: {
       label: 'Mas información y condiciones',
       title: 'Incluye',
@@ -130,7 +130,7 @@ export const roomExtrasMock: Array<RoomExtraContainer> = [{
            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
            cillum dolore`,
-    img: '/img.png',
+    img: 'room_extra_01.jpg',
     seeMore: {
       label: 'Mas información y condiciones',
       title: 'Incluye',
@@ -144,4 +144,4 @@ export const roomExtrasMock: Array<RoomExtraContainer> = [{
       footNote: 'Valores no acumulables a otras promociones similares'
     }
   }]
-}]
+}];

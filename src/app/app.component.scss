@@ -1,4 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700');
+
 @import './shared/styles/mixins';
 @import './shared/styles/variables';
 
-@import './shared/styles/normalize.7.0.0';
+/deep/ {
+  html {
+    background-color: $white_wildsand;
+  }
+
+  body {
+    color: $grey_shuttle;
+    display: flex;
+    font-family: $fontFamily_Roboto;
+    justify-content: center;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .card {
+    border-radius: unit($borderRadius, px);
+    box-shadow: 1px 1px 5px rgba($grey_shuttle, 0.3);
+  }
+}
+
+:host {
+  display: block;
+  flex-grow: 1;
+  max-width: unit($desktop , px);
+  @media(min-width: unit($tablet, px)) {
+    margin-left: unit($base_gap, px);
+    margin-right: unit($base_gap, px);
+  }
+}
+
+header{
+  background-color: $white;
+}

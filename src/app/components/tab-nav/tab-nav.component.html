@@ -1,7 +1,9 @@
-<ul>
-	<li *ngFor="let link of navList">
+<ul class="tab-nav">
+	<li *ngFor="let link of navList"
+      class="tab-nav_element">
 		<a 	[href]="link.path"
-				[ngClass]="{'active':routeData?.urlAfterRedirects==='/'+link.path}"
+        class="tab-nav_link"
+        [ngClass]="{'active':routeData?.urlAfterRedirects === '/'+link.path}"
 				(click)="onNavigate($event, link.path)">{{link.label}}</a>
 	</li>
 </ul>

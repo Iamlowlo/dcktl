@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { tabListMock, hotelInfoMock } from '../../mocks/the-cocktail.mocks';
 import { TabContent, HotelInfo } from '../../models/the-cocktail.model';
 
@@ -9,18 +9,22 @@ import { TabContent, HotelInfo } from '../../models/the-cocktail.model';
 })
 export class RoomRegimeComponent implements OnInit {
 
-	regimeList: Array<TabContent>
-	hotelInfo: HotelInfo
+  @HostBinding('class') classes: Array<string>;
+
+  hotelInfo: HotelInfo;
+  regimeList: Array<TabContent>;
+  selectedCard: TabContent;
 
   constructor() {
-  	this.regimeList = tabListMock
-  	this.hotelInfo = hotelInfoMock
+    this.regimeList = tabListMock;
+    this.hotelInfo = hotelInfoMock;
+    this.classes = ['card'];
   }
 
   ngOnInit() {
   }
 
-  selectedRegime($event) {
-  	console.log($event)
+  onSelectedRegime($event) {
+    this.selectedCard = $event;
   }
 }

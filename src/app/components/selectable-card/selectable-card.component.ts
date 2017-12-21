@@ -2,13 +2,13 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TabContent } from '../../models/the-cocktail.model';
 
 @Component({
-  selector: '[selectable-card]',
+  selector: 'app-selectable-card, [selectable-card]',
   templateUrl: './selectable-card.component.html',
   styleUrls: ['./selectable-card.component.scss']
 })
 export class SelectableCardComponent implements OnInit {
-	@Input() cardContent: TabContent
-	@Output() onCardSelected: EventEmitter<TabContent> = new EventEmitter()
+  @Input() cardContent: TabContent;
+  @Output() cardSelected: EventEmitter<TabContent> = new EventEmitter();
 
   constructor() { }
 
@@ -16,6 +16,6 @@ export class SelectableCardComponent implements OnInit {
   }
 
   onSelection($event) {
-  	this.onCardSelected.emit($event)
+    this.cardSelected.emit($event);
   }
 }

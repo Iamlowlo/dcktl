@@ -4,18 +4,18 @@ import { RoomRegimeComponent } from './containers/room-regime/room-regime.contai
 import { RoomExtrasComponent } from './containers/room-extras/room-extras.container.component';
 
 const routes = [
-	{
-		path: 'room-regime',
-		component: RoomRegimeComponent
-	}, {
-		path: 'room-extras',
-		component: RoomExtrasComponent
-	}, {
-		path: '',
-		redirectTo: 'room-regime',
-		pathMatch: 'full'
-	}
-]
+  {
+    path: 'room-regime',
+    component: RoomRegimeComponent
+  }, {
+    path: 'room-extras',
+    component: RoomExtrasComponent
+  }, {
+    path: '**',
+    redirectTo: 'room-regime',
+    pathMatch: 'full'
+  }
+];
 
 @NgModule({
   imports: [

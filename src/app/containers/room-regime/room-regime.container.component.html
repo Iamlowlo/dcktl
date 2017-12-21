@@ -1,8 +1,9 @@
 <h1 hotel-title [hotelInfo]="hotelInfo"></h1>
 <ul class="room-regime_list">
 	<li selectable-card
-		class="room-regime-card"
+		class="room-regime_card"
+    *ngFor="let card of regimeList; let i = index"
+    [ngClass]="{'active': i === regimeList.indexOf(selectedCard)}"
 		[cardContent]="card"
-		(onCardSelected)="selectedRegime($event)"
-		*ngFor="let card of regimeList"></li>
+		(cardSelected)="onSelectedRegime($event)"></li>
 </ul>

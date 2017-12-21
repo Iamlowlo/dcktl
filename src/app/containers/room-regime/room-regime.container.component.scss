@@ -1,0 +1,29 @@
+@import "~app/shared/styles/_variables.scss";
+@import "~app/shared/styles/_mixins.scss";
+
+:host {
+  background-color: $grey_athens;
+  display: block;
+  margin-top: unit($quarter_gap, px);
+  margin-bottom: unit($quarter_gap, px);
+  padding: unit($half_gap, px);
+}
+
+.room-regime {
+  &_list {
+    @media (min-width: unit($tablet, px)){
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      grid-gap: 2px;
+    }
+    @media (min-width: unit($desktop, px)){
+      grid-template-columns: repeat(5, 20%);
+    }
+  }
+  &_card {
+    margin-bottom: 2px;
+    @media (min-width: unit($tablet, px)){
+      margin-bottom: 0;
+    }
+  }
+}
