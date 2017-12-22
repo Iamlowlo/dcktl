@@ -9,27 +9,27 @@
 
 .room-extras{
   &_content {
-    border: 1px solid $grey_athens;
+    border: 1px solid $grey_silverSand;
     display: grid;
     grid-template-columns: 270px 1fr;
     grid-template-areas: "image body" "seeMoreContent seeMoreContent";
-    &:not(:first-child) {
-      margin-top: unit($half_gap, px);
-    }
+    margin-bottom: unit($half_gap, px);
   }
   &_image {
     grid-area: image;
   }
   &_body {
-    padding: unit($half_gap, px) unit($half_gap, px) unit($quarter_gap, px);
     display: flex;
     flex-direction: column;
     grid-area: body;
+    max-width: 550px;
+    padding: unit($half_gap, px) unit($half_gap, px) unit($quarter_gap, px);
   }
   &_title {
     color: $blue_chathams;
     font-size: 1.15em;
     font-family: $fontFamily_RobotoSlab;
+    margin-bottom: 0.3em;
   }
   &_description {
     margin-bottom: 0;
@@ -44,10 +44,14 @@
       font-family: $fontFamily_RobotoSlab;
       font-size: 0.9em;
       line-height: 1.4em;
+      span  {
+        cursor: pointer;
+      }
     }
 
     &_arrow {
       transition: transform $defaultAnimationLength;
+      width: 1em;
       &.opened {
         transform: rotateZ(180deg);
       }
@@ -55,7 +59,40 @@
   }
 }
 
-.room-extra_see-more_content {
-  grid-area: seeMoreContent;
-  padding: unit($quarter_gap, px) unit($base_gap+$half_gap, px);
+.room-extra_see-more {
+  &_content {
+    padding: unit($base_gap, px) unit($base_gap+$half_gap, px) unit($half_gap, px);
+  }
+  &_dropdown {
+    grid-area: seeMoreContent;
+  }
+
+  &_info-list {
+    columns: auto 3;
+    padding-bottom: unit($base_gap, px);
+    padding-top: unit($quarter_gap, px);
+  }
+
+  &_info {
+    font-size: 0.9em;
+    line-height: 1.4em;
+    margin-bottom: 0.5em;
+    padding-left: 1em;
+    position: relative;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    &:before {
+      color: $grey_shuttle;
+      content: '\2022';
+      display: block;
+      left: unit($eighth_gap, px);
+      top: 0;
+      position: absolute;
+    }
+  }
+
+  &_foot-note {
+    color: $blue_chathams;
+  }
 }

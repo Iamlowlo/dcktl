@@ -71,7 +71,7 @@ footer {
       content: '\2022';
       display: block;
       left: unit($eighth_gap, px);
-      top: unit($eighth_gap, px);
+      top: 0;
       position: absolute;
     }
   }

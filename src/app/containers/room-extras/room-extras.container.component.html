@@ -6,7 +6,7 @@
       [subtitle]="roomExtraContainer.subtitle"
       [label]="roomExtraContainer.tag.label"
       [labelPosition]="roomExtraContainer.tag.position">
-      <article *ngFor="let roomExtra of roomExtraContainer.extras"
+      <article *ngFor="let roomExtra of roomExtraContainer.extras; let i = index"
       class="room-extras_content">
         <img [src]="getImgPath(roomExtra.img)"
              alt="{{roomExtra.title}}"
@@ -15,22 +15,24 @@
           <h1 class="room-extras_title">{{roomExtra.title}}</h1>
           <p class="room-extras_description">{{roomExtra.body}}</p>
           <div class="room-extras_see-more_trigger"
-               (click)="isOpened = !isOpened"
                *ngIf="roomExtra.seeMore.info">
-            {{roomExtra.seeMore.label}}
+            <span (click)="isOpened[i] = !isOpened[i]">{{roomExtra.seeMore.label}}
             <img [src]="getImgPath('angle-down-blue.svg')"
                  class="room-extras_see-more_arrow"
-                 [ngClass]="{'opened': isOpened}"
-                 alt="arrow down">
+                 [ngClass]="{'opened': isOpened[i]}"
+                 alt="arrow down"></span>
           </div>
         </div>
-        <div class="room-extra_see-more_content">
-          <div class="room-extra_see-more_label" *ngIf="roomExtra.seeMore.title">{{roomExtra.seeMore.title}}</div>
-          <ul class="room-extra_see-more_info-list">
-            <li class="room-extra_see-more_info"
-                *ngFor="let info of roomExtra.seeMore.info">{{info}}</li>
-          </ul>
-          <span>{{roomExtra.seeMore.footNote}}</span>
+        <div class="dropdown_container room-extra_see-more_dropdown"
+             [ngClass]="{'opened': isOpened[i]}">
+          <div class="room-extra_see-more_content">
+            <div class="room-extra_see-more_label" *ngIf="roomExtra.seeMore.title">{{roomExtra.seeMore.title}}</div>
+            <ul class="room-extra_see-more_info-list">
+              <li class="room-extra_see-more_info"
+                  *ngFor="let info of roomExtra.seeMore.info">{{info}}</li>
+            </ul>
+            <span class="room-extra_see-more_foot-note">{{roomExtra.seeMore.footNote}}</span>
+          </div>
         </div>
       </article>
   </li>

@@ -9,7 +9,7 @@
     <span class="dropdown-card_label"
           [ngClass]="{'tag_top-right': labelPosition === 'top-left'}">{{label}}</span>
   </header>
-  <div class="dropdown-card_body"
+  <div class="dropdown-card_body dropdown_container"
        [ngClass]="{'opened':isOpened}">
     <ng-content></ng-content>
   </div>

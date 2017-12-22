@@ -9,11 +9,11 @@ import { RoomExtraContainer } from '../../models/the-cocktail.model';
 })
 export class RoomExtrasComponent implements OnInit {
   roomExtras: Array<RoomExtraContainer>;
-  defaultOpened: boolean;
+  isOpened: Array<boolean>;
 
   constructor() {
     this.roomExtras = roomExtrasMock;
-    this.defaultOpened = false;
+    this.isOpened = [];
   }
 
   ngOnInit() {

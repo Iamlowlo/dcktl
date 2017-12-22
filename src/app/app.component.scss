@@ -40,6 +40,16 @@
     border-radius: unit($borderRadius, px);
     box-shadow: 1px 1px 5px rgba($grey_shuttle, 0.3);
   }
+  .dropdown_container {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: height $defaultAnimationLength, opacity $defaultAnimationLength;
+    &.opened {
+      height: 100%;
+      opacity: 1;
+    }
+  }
 }
 
 :host {
