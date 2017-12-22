@@ -21,7 +21,6 @@ export class TabNavComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.subscription$ = this.router.events.subscribe(route => {
       if (route instanceof RoutesRecognized) {
-        console.log(route);
         this.routeData = route;
       }
     });

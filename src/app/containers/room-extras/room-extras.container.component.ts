@@ -8,13 +8,23 @@ import { RoomExtraContainer } from '../../models/the-cocktail.model';
   styleUrls: ['./room-extras.container.component.scss']
 })
 export class RoomExtrasComponent implements OnInit {
-  roomExtras: Array<RoomExtraContainer>
+  roomExtras: Array<RoomExtraContainer>;
+  defaultOpened: boolean;
 
   constructor() {
-    this.roomExtras = roomExtrasMock
+    this.roomExtras = roomExtrasMock;
+    this.defaultOpened = false;
   }
 
   ngOnInit() {
+  }
+
+  getImgPath(imgFilename) {
+    return `/assets/${imgFilename}`;
+  }
+
+  toggleOpened(isOpened) {
+    return !isOpened;
   }
 
 }

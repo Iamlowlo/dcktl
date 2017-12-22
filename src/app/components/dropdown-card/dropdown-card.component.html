@@ -1,4 +1,16 @@
 <section>
-  <ng-content select="[dropdown-card-header]"></ng-content>
-  <ng-content select="[dropdown-card-body]"></ng-content>
+  <header class="dropdown-card_header"
+      (click)="toggleDropdown()">
+    <img class="dropdown-card_arrow"
+         [ngClass]="{'opened':isOpened}"
+         src="/assets/angle-down-blue.svg" alt="">
+    <h1 class="dropdown-card_title">{{title}}</h1>
+    <span class="dropdown-card_subtitle">{{subtitle}}</span>
+    <span class="dropdown-card_label"
+          [ngClass]="{'tag_top-right': labelPosition === 'top-left'}">{{label}}</span>
+  </header>
+  <div class="dropdown-card_body"
+       [ngClass]="{'opened':isOpened}">
+    <ng-content></ng-content>
+  </div>
 </section>

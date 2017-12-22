@@ -1,0 +1,61 @@
+@import "~app/shared/styles/_variables.scss";
+@import "~app/shared/styles/_mixins.scss";
+
+:host {
+  display: block;
+  margin-top: unit($quarter_gap, px);
+  margin-bottom: unit($quarter_gap, px);
+}
+
+.room-extras{
+  &_content {
+    border: 1px solid $grey_athens;
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    grid-template-areas: "image body" "seeMoreContent seeMoreContent";
+    &:not(:first-child) {
+      margin-top: unit($half_gap, px);
+    }
+  }
+  &_image {
+    grid-area: image;
+  }
+  &_body {
+    padding: unit($half_gap, px) unit($half_gap, px) unit($quarter_gap, px);
+    display: flex;
+    flex-direction: column;
+    grid-area: body;
+  }
+  &_title {
+    color: $blue_chathams;
+    font-size: 1.15em;
+    font-family: $fontFamily_RobotoSlab;
+  }
+  &_description {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 0.9em;
+    line-height: 1.4em;
+    flex-grow: 1;
+  }
+  &_see-more {
+    &_trigger {
+      color: $blue_picton;
+      font-family: $fontFamily_RobotoSlab;
+      font-size: 0.9em;
+      line-height: 1.4em;
+    }
+
+    &_arrow {
+      transition: transform $defaultAnimationLength;
+      &.opened {
+        transform: rotateZ(180deg);
+      }
+    }
+  }
+}
+
+.room-extra_see-more_content {
+  grid-area: seeMoreContent;
+  padding: unit($quarter_gap, px) unit($base_gap+$half_gap, px);
+}

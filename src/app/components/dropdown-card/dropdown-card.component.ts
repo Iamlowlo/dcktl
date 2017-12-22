@@ -1,15 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: '[dropdown-card]',
+  selector: 'app-dropdown-card, [dropdown-card]',
   templateUrl: './dropdown-card.component.html',
   styleUrls: ['./dropdown-card.component.scss']
 })
 export class DropdownCardComponent implements OnInit {
+  @Input() title: string;
+  @Input() subtitle: string;
+  @Input() label: string;
+  @Input() labelPosition: string;
 
-  constructor() { }
+  isOpened: boolean;
+
+  constructor() {
+    this.isOpened = false;
+  }
 
   ngOnInit() {
   }
 
+  toggleDropdown() {
+    this.isOpened = !this.isOpened;
+  }
 }

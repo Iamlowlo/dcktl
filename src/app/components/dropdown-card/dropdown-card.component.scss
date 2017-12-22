@@ -1,0 +1,57 @@
+@import "~app/shared/styles/_variables.scss";
+@import "~app/shared/styles/_mixins.scss";
+
+:host {
+  background-color: $white;
+  margin-top: unit($base_gap, px);
+  .dropdown-card{
+    &_header {
+      align-items: baseline;
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: 60px auto 1fr;
+      padding: unit($base_gap, px) unit($half_gap, px)  unit($half_gap, px);
+      position: relative;
+    }
+    &_arrow {
+      align-self: center;
+      justify-self: center;
+      transition: transform $defaultAnimationLength;
+      &.opened {
+        transform: rotateZ(180deg);
+      }
+    }
+    &_title {
+      color: $blue_picton;
+      display: inline-block;
+      font-family: $fontFamily_RobotoSlab;
+      font-size: 1.5em;
+    }
+
+    &_subtitle {
+      color: $blue_chathams;
+      display: inline-block;
+      font-size: 0.8em;
+      margin-left: unit($half_gap, px);
+    }
+
+    &_label {
+      background-color: $red_alizarin;
+      color: $white_alabaster;
+      font-size: 0.8em;
+      font-weight: 100;
+      padding: 0.6em 1em;
+      position: absolute;
+      text-transform: uppercase;
+      &.tag_top-right {
+        top: 0;
+        right: 0;
+      }
+    }
+
+    &_body {
+      padding: 0 unit($half_gap, px) unit($half_gap, px);
+    }
+  }
+}
+
