@@ -68,9 +68,15 @@
   }
 
   &_info-list {
-    columns: auto 3;
+    columns: auto 1;
     padding-bottom: unit($base_gap, px);
     padding-top: unit($quarter_gap, px);
+    @media (min-width: unit($tablet, px)){
+      columns: auto 2;
+    }
+    @media (min-width: unit($desktop, px)){
+      columns: auto 3;
+    }
   }
 
   &_info {
